@@ -1,0 +1,172 @@
+#slideshow{
+  position : relative;
+  height : 225px;
+  width: 560px;
+  overflow:hidden;
+  line-height: 1;
+}
+
+#slideshow .slides {
+  height : 225px;
+  width : 560px;
+}
+#slideshow .cont {
+  height : 225px;
+  width : 560px;
+}
+#slideshow slide {
+  font-family: Verdana; 
+  display : none;
+  height : 225px;
+  width : 560px;
+  font-weight: normal;
+  position: absolute;
+  z-index: 1;
+}
+
+#slideshow slide.selected {
+  display : block;
+}
+#slideshow slide .table, #slideshow slide .line {
+  width : 180px;
+  height: 225px;
+}
+#slideshow slide div.left-column {
+  z-index:1;
+  width : 180px;
+  height: 225px;
+}
+#slideshow slide div.left-column {
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+
+  /* IE 5-7 */
+  filter: alpha(opacity=90);
+
+  /* Netscape */
+  -moz-opacity: 0.9;
+
+  /* Safari 1.x */
+  -khtml-opacity: 0.9;
+
+  /* Good browsers */
+  opacity: 0.9;
+}
+
+#slideshow slide h1 {
+  font-family: Verdana;
+  font-weight : normal;
+  font-size: 20px;
+  color : white;
+  display : block;
+  border-left : 1px solid white;
+  padding-left : 10px;
+  margin : 20px;
+}
+#slideshow slide .subtitles {
+  font-size: 12px;
+  display : block;
+  margin-left : 20px;
+  margin-bottom : 10px;
+  height : 80px;
+  color : white;
+  width: 150px;
+}
+#slideshow slide a.linkMore {
+  font-size: 12px;
+  display : block;
+  height : 15px;
+  background-color : white;
+  padding: 3px;
+  margin: 0px 20px;
+  text-align: center;  
+}
+#slideshow div.controls {
+  position: absolute;
+  bottom: 10px;
+  width : 140px;
+  margin : 0px 20px;
+  z-index: 2;
+  font-size : 3px;
+}
+#slideshow div.controls div.control {
+  background-image : url("assets/pastille_slide.png");  
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  line-height : 5px;
+}
+#slideshow div.controls div.selected, div.controls div:hover {
+  background-image : url("assets/pastille_slide_2.png");  
+  background-repeat: no-repeat;  
+}
+#slideshow div.controls div.previous, #slideshow  div.controls div.next {
+  width: 14px;
+  height: 14px;
+  position : absolute;
+  bottom: 0px;
+  line-height : 14px;
+}
+#slideshow div.controls div.previous:hover,#slideshow div.controls div.next:hover {
+  cursor : pointer;
+}
+
+#slideshow div.controls div.previous {
+  background-image : url("assets/slide_precedente.png");
+  background-repeat: no-repeat;  
+  left : 0px;
+}
+#slideshow div.controls div.next {
+  background-image : url("assets/slide_suivante.png"); 
+  background-repeat: no-repeat;  
+  right : 0px;
+}
+#slideshow div.controls div.control {
+  background-image : url("assets/pastille_slide.png"); 
+  background-repeat: no-repeat;  
+  bottom: 4px;
+}
+#slideshow div.controls div.control:hover, #slideshow  div.controls div.control.selected {
+  background-image : url("assets/pastille_slide_2.png"); 
+  background-repeat: no-repeat;  
+  cursor : pointer;
+  bottom: 3px;
+  width: 8px;
+  height: 8px;
+  line-height : 8px;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+#slideshow ul {
+	list-style: none;
+}
+#slideshow table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+

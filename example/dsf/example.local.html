@@ -1,0 +1,63 @@
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  
+  </head>
+  <body>
+
+  <link rel="stylesheet" href="example.local.css" type="text/css">
+  <div id="slideshow">
+  </div>
+
+<script type="text/javascript" src="lib/Seed.merged.js"> </script>
+<script type="text/javascript" src="lib/map.js"> </script>
+<script type="text/javascript" src="lib/each.js"> </script>
+<script type="text/javascript" src="lib/toDOM.js"> </script>
+<script type="text/javascript" src="lib/bind.js"> </script>
+<script type="text/javascript" src="lib/curry.js"> </script>
+<script type="text/javascript" src="lib/jquery.min.js"> </script>
+<script type="text/javascript" src="extend.js"> </script>
+<script type="text/javascript" src="Slideshow.js"> </script>
+<script type="text/javascript" src="Slide.js"> </script>
+
+  <script>
+    sand.define("jQuery", function(){ return $ });
+  </script>
+  <script>
+    sand.require("Slideshow/Slideshow", function(r){
+      
+      new r.Slideshow({
+        parentEl : document.getElementById("slideshow"),
+        started : false,
+        duration : 4000,
+        transition : 500,
+        slides : [{
+            title : "Volontariat international",
+            image : "assets/slide1.png",
+            subtitle : "&#62; Service civique<br/>&#62; Congés de solidarité<br/>&#62; Bénévolat<br/>&#62; Stage<br/><br/> Engagez-vous auprès de DSF !",
+            color : "#75A6D4",
+            moreLink : "http://www.developpementsansfrontieres.org/fr/dsf/portail/Pages/Volontariat.aspx"
+          },{
+            title : "Formation Conseil",
+            image : "assets/slide3.png",
+            color : "#939393",
+            subtitle : "&#62; Préparation du départ<br/>&#62; Gestion de projet<br/>&#62; Financement<br/>&#62; etc...<br/><br/> DSF partage son expérience de solidarité!",
+            moreLink : "http://www.developpementsansfrontieres.org/fr/dsf/portail/Pages/Formation-Conseil.aspx"          
+          },{
+            title : "Programmes d'intervention",
+            image : "assets/slide3.png",
+            color : "#A1CE49",
+            subtitle : "&#62; Tunisie, Pérou, Inde...<br/>&#62; Education, santé, droit...<br/><br/><br/> DSF monte des projets de renforcement des capacités",
+            moreLink : "http://www.developpementsansfrontieres.org/fr/dsf/portail/Pages/Projets.aspx"                 
+          },{
+            title : "DSF l'association",
+            image : "assets/slide4.png",
+            color : "#FFAE64",
+            subtitle : "&#62; Les activités<br/>&#62; Les équipes<br/>&#62; Nos partenaires<br/><br/><br/> Pour mieux comprendre le fonctionnement de DSF !",
+            moreLink : "http://www.developpementsansfrontieres.org/fr/dsf/portail/Pages/DSF.aspx"                 
+        }]
+      });
+    });
+  </script>
+  </body>
+</html>
